@@ -15,6 +15,7 @@ namespace MyAPI.Database
 
             // If database does not exist then the database and all its schema are created
             //* If no database this  line will created database from database context
+            // ! if error here please check database. [Docker database]
             context.Database.EnsureCreated();
 
             InsertData(context); 

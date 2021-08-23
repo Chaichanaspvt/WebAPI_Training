@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Cors;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
 using MyAPI.Database;
@@ -9,7 +10,7 @@ using MyAPI.Models;
 
 namespace MyAPI.Controllers
 {
-
+    [EnableCors("AllowAll")]
     [Route("api/[controller]")]
     [ApiController]
     public class ProductController : ControllerBase

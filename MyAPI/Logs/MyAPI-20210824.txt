@@ -1,0 +1,258 @@
+2021-08-24T03:16:31.8406550+07:00  [INF] Entity Framework Core "5.0.9" initialized '"DatabaseContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2021-08-24T03:44:17.0930794+07:00  [INF] Entity Framework Core "5.0.9" initialized '"DatabaseContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2021-08-24T03:44:17.5206833+07:00  [INF] Executed DbCommand ("35"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT 1" (0723d8ff)
+2021-08-24T03:44:17.5617416+07:00  [INF] Executed DbCommand ("34"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0" (0723d8ff)
+2021-08-24T03:44:17.7964517+07:00  [INF] Executed DbCommand ("34"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Categories] AS [c]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END" (0723d8ff)
+2021-08-24T03:44:17.9760627+07:00  [INF] Now listening on: "http://localhost:5000" (d826f4b8)
+2021-08-24T03:44:17.9777653+07:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2021-08-24T03:44:17.9790987+07:00  [INF] Hosting environment: "Development" (c3307c92)
+2021-08-24T03:44:17.9805712+07:00  [INF] Content root path: "H:\Training\WebAPI_Training\MyAPI" (b5d60022)
+2021-08-24T03:44:18.1040377+07:00 0HMB6ER3G36QS:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:5000/   (ca22a1cb)
+2021-08-24T03:44:18.1355537+07:00 0HMB6ER3G36QS:00000001 [INF] Request finished in 35.6003ms 404  (791a596a)
+2021-08-24T03:44:35.0603454+07:00 0HMB6ER3G36QS:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/product'   (ca22a1cb)
+2021-08-24T03:44:35.0608886+07:00 0HMB6ER3G36QS:00000002 [INF] Request finished in 0.6948ms 404  (791a596a)
+2021-08-24T03:44:39.0671308+07:00 0HMB6ER3G36QS:00000003 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/product/   (ca22a1cb)
+2021-08-24T03:44:39.0721093+07:00 0HMB6ER3G36QS:00000003 [INF] Executing endpoint '"MyAPI.Controllers.ProductController.GetProducts (MyAPI)"' (500cc934)
+2021-08-24T03:44:39.1590674+07:00 0HMB6ER3G36QS:00000003 [INF] Route matched with "{action = \"GetProducts\", controller = \"Product\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.IActionResult GetProducts()" on controller "MyAPI.Controllers.ProductController" ("MyAPI"). (122b2fdf)
+2021-08-24T03:44:39.1664646+07:00 0HMB6ER3G36QS:00000003 [INF] Entity Framework Core "5.0.9" initialized '"DatabaseContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2021-08-24T03:44:39.4553909+07:00 0HMB6ER3G36QS:00000003 [INF] Executed DbCommand ("189"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [p].[ProductID], [p].[CategoryID], [p].[Name], [p].[Price], [p].[Sale], [p].[SupplierID]
+FROM [Products] AS [p]" (0723d8ff)
+2021-08-24T03:44:39.4959668+07:00 0HMB6ER3G36QS:00000003 [INF] result count : 2 (fccaf79a)
+2021-08-24T03:44:39.5047147+07:00 0HMB6ER3G36QS:00000003 [INF] Executing ObjectResult, writing value of type '"System.Collections.Generic.List`1[[MyAPI.Models.Product, MyAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"'. (8a1b66c8)
+2021-08-24T03:44:39.5185653+07:00 0HMB6ER3G36QS:00000003 [INF] Executed action "MyAPI.Controllers.ProductController.GetProducts (MyAPI)" in 354.8062ms (afa2e885)
+2021-08-24T03:44:39.5186779+07:00 0HMB6ER3G36QS:00000003 [INF] Executed endpoint '"MyAPI.Controllers.ProductController.GetProducts (MyAPI)"' (99874f2b)
+2021-08-24T03:44:39.5237765+07:00 0HMB6ER3G36QS:00000003 [INF] Request finished in 456.8939ms 200 application/json; charset=utf-8 (791a596a)
+2021-08-24T03:44:39.5458766+07:00 0HMB6ER3G36QS:00000004 [INF] Request starting HTTP/1.1 GET http://localhost:5000/favicon.ico   (ca22a1cb)
+2021-08-24T03:44:39.5461074+07:00 0HMB6ER3G36QS:00000004 [INF] Request finished in 0.2976ms 404  (791a596a)
+2021-08-24T03:45:24.4080770+07:00 0HMB6ER3G36QS:00000005 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/product/   (ca22a1cb)
+2021-08-24T03:45:24.4100878+07:00 0HMB6ER3G36QS:00000005 [INF] Executing endpoint '"MyAPI.Controllers.ProductController.GetProducts (MyAPI)"' (500cc934)
+2021-08-24T03:45:24.4104027+07:00 0HMB6ER3G36QS:00000005 [INF] Route matched with "{action = \"GetProducts\", controller = \"Product\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.IActionResult GetProducts()" on controller "MyAPI.Controllers.ProductController" ("MyAPI"). (122b2fdf)
+2021-08-24T03:45:24.4410133+07:00 0HMB6ER3G36QS:00000005 [INF] Entity Framework Core "5.0.9" initialized '"DatabaseContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2021-08-24T03:45:24.4568993+07:00 0HMB6ER3G36QS:00000005 [INF] Executed DbCommand ("15"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [p].[ProductID], [p].[CategoryID], [p].[Name], [p].[Price], [p].[Sale], [p].[SupplierID]
+FROM [Products] AS [p]" (0723d8ff)
+2021-08-24T03:45:24.4596122+07:00 0HMB6ER3G36QS:00000005 [INF] result count : 2 (fccaf79a)
+2021-08-24T03:45:24.4609785+07:00 0HMB6ER3G36QS:00000005 [INF] Executing ObjectResult, writing value of type '"System.Collections.Generic.List`1[[MyAPI.Models.Product, MyAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"'. (8a1b66c8)
+2021-08-24T03:45:24.4613093+07:00 0HMB6ER3G36QS:00000005 [INF] Executed action "MyAPI.Controllers.ProductController.GetProducts (MyAPI)" in 50.8383ms (afa2e885)
+2021-08-24T03:45:24.4613386+07:00 0HMB6ER3G36QS:00000005 [INF] Executed endpoint '"MyAPI.Controllers.ProductController.GetProducts (MyAPI)"' (99874f2b)
+2021-08-24T03:45:24.4614565+07:00 0HMB6ER3G36QS:00000005 [INF] Request finished in 54.0241ms 200 application/json; charset=utf-8 (791a596a)
+2021-08-24T03:55:40.9789952+07:00  [INF] Entity Framework Core "5.0.9" initialized '"DatabaseContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2021-08-24T03:55:41.3281870+07:00  [INF] Executed DbCommand ("33"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT 1" (0723d8ff)
+2021-08-24T03:55:41.3639972+07:00  [INF] Executed DbCommand ("28"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0" (0723d8ff)
+2021-08-24T03:55:41.5539227+07:00  [INF] Executed DbCommand ("17"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Categories] AS [c]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END" (0723d8ff)
+2021-08-24T03:56:40.3893913+07:00  [INF] Entity Framework Core "5.0.9" initialized '"DatabaseContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2021-08-24T03:56:40.8002044+07:00  [INF] Executed DbCommand ("29"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT 1" (0723d8ff)
+2021-08-24T03:56:40.8367949+07:00  [INF] Executed DbCommand ("29"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0" (0723d8ff)
+2021-08-24T03:56:41.0174106+07:00  [INF] Executed DbCommand ("16"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Categories] AS [c]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END" (0723d8ff)
+2021-08-24T04:01:27.6071563+07:00  [INF] Entity Framework Core "5.0.9" initialized '"DatabaseContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2021-08-24T04:01:27.9503050+07:00  [INF] Executed DbCommand ("34"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT 1" (0723d8ff)
+2021-08-24T04:01:27.9871622+07:00  [INF] Executed DbCommand ("29"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0" (0723d8ff)
+2021-08-24T04:01:28.1701556+07:00  [INF] Executed DbCommand ("14"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Categories] AS [c]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END" (0723d8ff)
+2021-08-24T04:03:14.3148967+07:00  [INF] Entity Framework Core "5.0.9" initialized '"DatabaseContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2021-08-24T04:03:14.6474500+07:00  [INF] Executed DbCommand ("35"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT 1" (0723d8ff)
+2021-08-24T04:03:14.6829993+07:00  [INF] Executed DbCommand ("28"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0" (0723d8ff)
+2021-08-24T04:03:14.8738428+07:00  [INF] Executed DbCommand ("14"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Categories] AS [c]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END" (0723d8ff)
+2021-08-24T04:05:08.8590025+07:00  [INF] Entity Framework Core "5.0.9" initialized '"DatabaseContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2021-08-24T04:05:09.2456462+07:00  [INF] Executed DbCommand ("34"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT 1" (0723d8ff)
+2021-08-24T04:05:09.2831487+07:00  [INF] Executed DbCommand ("30"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0" (0723d8ff)
+2021-08-24T04:05:09.4775579+07:00  [INF] Executed DbCommand ("17"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Categories] AS [c]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END" (0723d8ff)
+2021-08-24T04:07:11.4939173+07:00  [INF] Entity Framework Core "5.0.9" initialized '"DatabaseContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2021-08-24T04:07:11.9022240+07:00  [INF] Executed DbCommand ("28"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT 1" (0723d8ff)
+2021-08-24T04:07:11.9399560+07:00  [INF] Executed DbCommand ("30"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0" (0723d8ff)
+2021-08-24T04:07:12.1311860+07:00  [INF] Executed DbCommand ("17"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Categories] AS [c]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END" (0723d8ff)
+2021-08-24T04:07:12.2898422+07:00  [INF] Now listening on: "http://localhost:5000" (d826f4b8)
+2021-08-24T04:07:12.2917268+07:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2021-08-24T04:07:12.2929974+07:00  [INF] Hosting environment: "Development" (c3307c92)
+2021-08-24T04:07:12.2943215+07:00  [INF] Content root path: "H:\Training\WebAPI_Training\MyAPI" (b5d60022)
+2021-08-24T04:07:12.4452681+07:00 0HMB6F7T2S5BI:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:5000/   (ca22a1cb)
+2021-08-24T04:07:12.4746170+07:00 0HMB6F7T2S5BI:00000001 [INF] Request finished in 31.7726ms 404  (791a596a)
+2021-08-24T04:07:22.6706702+07:00 0HMB6F7T2S5BI:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/product/   (ca22a1cb)
+2021-08-24T04:07:22.7125780+07:00 0HMB6F7T2S5BI:00000002 [ERR] An unhandled exception has occurred while executing the request. (48a46595)
+System.InvalidOperationException: Endpoint MyAPI.Controllers.ProductController.GetProducts (MyAPI) contains CORS metadata, but a middleware was not found that supports CORS.
+Configure your application startup by adding app.UseCors() inside the call to Configure(..) in the application startup code. The call to app.UseAuthorization() must appear between app.UseRouting() and app.UseEndpoints(...).
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.ThrowMissingCorsMiddlewareException(Endpoint endpoint)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2021-08-24T04:07:22.7363977+07:00 0HMB6F7T2S5BI:00000002 [INF] Request finished in 65.8277ms 500 text/html; charset=utf-8 (791a596a)
+2021-08-24T04:08:26.3250919+07:00  [INF] Entity Framework Core "5.0.9" initialized '"DatabaseContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2021-08-24T04:08:26.6716071+07:00  [INF] Executed DbCommand ("31"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT 1" (0723d8ff)
+2021-08-24T04:08:26.7092206+07:00  [INF] Executed DbCommand ("30"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0" (0723d8ff)
+2021-08-24T04:08:26.8945218+07:00  [INF] Executed DbCommand ("19"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Categories] AS [c]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END" (0723d8ff)
