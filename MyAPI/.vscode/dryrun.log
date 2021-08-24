@@ -1,0 +1,7 @@
+make --dry-run --always-make --keep-going --print-directory
+make: Entering directory `/Users/Mac/Projects/MyAPI/MyAPI'
+ 
+make: Leaving directory `/Users/Mac/Projects/MyAPI/MyAPI'
+ 
+make: *** No targets specified and no makefile found.  Stop.
+ 
