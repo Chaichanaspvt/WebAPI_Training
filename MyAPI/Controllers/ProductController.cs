@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
@@ -9,7 +10,7 @@ using MyAPI.Models;
 
 namespace MyAPI.Controllers
 {
-
+   
     [Route("api/[controller]")]
     [ApiController]
     public class ProductController : ControllerBase

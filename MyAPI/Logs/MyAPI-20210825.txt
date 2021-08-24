@@ -1,0 +1,169 @@
+2021-08-25T00:27:33.1712910+07:00  [INF] Entity Framework Core "5.0.9" initialized '"DatabaseContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2021-08-25T00:27:33.8976790+07:00  [INF] Executed DbCommand ("38"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT 1" (0723d8ff)
+2021-08-25T00:27:33.9419390+07:00  [INF] Executed DbCommand ("25"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0" (0723d8ff)
+2021-08-25T00:27:34.2497450+07:00  [INF] Executed DbCommand ("7"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Categories] AS [c]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END" (0723d8ff)
+2021-08-25T00:27:34.6520350+07:00  [FTL] Unable to start Kestrel. (fc6a528d)
+System.IO.IOException: Failed to bind to address http://127.0.0.1:5000: address already in use.
+ ---> Microsoft.AspNetCore.Connections.AddressInUseException: Address already in use
+ ---> System.Net.Sockets.SocketException (48): Address already in use
+   at System.Net.Sockets.Socket.UpdateStatusAfterSocketErrorAndThrowException(SocketError error, String callerName)
+   at System.Net.Sockets.Socket.DoBind(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Bind(EndPoint localEP)
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.SocketConnectionListener.Bind()
+   --- End of inner exception stack trace ---
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.SocketConnectionListener.Bind()
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.SocketTransportFactory.BindAsync(EndPoint endpoint, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServer.<>c__DisplayClass21_0`1.<<StartAsync>g__OnBind|0>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.BindEndpointAsync(ListenOptions endpoint, AddressBindContext context)
+   --- End of inner exception stack trace ---
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.BindEndpointAsync(ListenOptions endpoint, AddressBindContext context)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.LocalhostListenOptions.BindAsync(AddressBindContext context)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.AddressesStrategy.BindAsync(AddressBindContext context)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.BindAsync(IServerAddressesFeature addresses, KestrelServerOptions serverOptions, ILogger logger, Func`2 createBinding)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServer.StartAsync[TContext](IHttpApplication`1 application, CancellationToken cancellationToken)
+2021-08-25T00:28:44.6589500+07:00  [INF] Entity Framework Core "5.0.9" initialized '"DatabaseContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2021-08-25T00:28:45.3326510+07:00  [INF] Executed DbCommand ("34"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT 1" (0723d8ff)
+2021-08-25T00:28:45.3805870+07:00  [INF] Executed DbCommand ("29"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0" (0723d8ff)
+2021-08-25T00:28:45.6916950+07:00  [INF] Executed DbCommand ("10"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Categories] AS [c]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END" (0723d8ff)
+2021-08-25T00:29:30.8726430+07:00  [INF] Entity Framework Core "5.0.9" initialized '"DatabaseContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2021-08-25T00:29:31.5805990+07:00  [INF] Executed DbCommand ("43"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT 1" (0723d8ff)
+2021-08-25T00:29:31.6273820+07:00  [INF] Executed DbCommand ("28"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0" (0723d8ff)
+2021-08-25T00:29:31.9357380+07:00  [INF] Executed DbCommand ("12"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Categories] AS [c]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END" (0723d8ff)
+2021-08-25T00:29:32.3786470+07:00  [INF] Now listening on: "http://localhost:5000" (d826f4b8)
+2021-08-25T00:29:32.3842960+07:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2021-08-25T00:29:32.3880600+07:00  [INF] Hosting environment: "Development" (c3307c92)
+2021-08-25T00:29:32.4125000+07:00  [INF] Content root path: "/Users/Mac/Projects/MyAPI/MyAPI" (b5d60022)
+2021-08-25T00:29:32.6464920+07:00 0HMB74IU47HIF:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:5000/   (ca22a1cb)
+2021-08-25T00:29:32.7343890+07:00 0HMB74IU47HIF:00000001 [INF] Request finished in 89.1055ms 404  (791a596a)
+2021-08-25T00:29:37.2774760+07:00 0HMB74IU47HIF:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/product   (ca22a1cb)
+2021-08-25T00:29:37.3054550+07:00 0HMB74IU47HIF:00000002 [INF] Executing endpoint '"MyAPI.Controllers.ProductController.GetProducts (MyAPI)"' (500cc934)
+2021-08-25T00:29:37.3846050+07:00 0HMB74IU47HIF:00000002 [INF] Route matched with "{action = \"GetProducts\", controller = \"Product\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.IActionResult GetProducts()" on controller "MyAPI.Controllers.ProductController" ("MyAPI"). (122b2fdf)
+2021-08-25T00:29:37.4346410+07:00 0HMB74IU47HIF:00000002 [INF] Entity Framework Core "5.0.9" initialized '"DatabaseContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2021-08-25T00:29:37.5698680+07:00 0HMB74IU47HIF:00000002 [INF] Executed DbCommand ("17"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [p].[ProductID], [p].[CategoryID], [p].[Name], [p].[Price], [p].[Sale], [p].[SupplierID]
+FROM [Products] AS [p]" (0723d8ff)
+2021-08-25T00:29:37.6563940+07:00 0HMB74IU47HIF:00000002 [INF] result count : 2 (fccaf79a)
+2021-08-25T00:29:37.7020850+07:00 0HMB74IU47HIF:00000002 [INF] Executing ObjectResult, writing value of type '"System.Collections.Generic.List`1[[MyAPI.Models.Product, MyAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"'. (8a1b66c8)
+2021-08-25T00:29:37.7514490+07:00 0HMB74IU47HIF:00000002 [INF] Executed action "MyAPI.Controllers.ProductController.GetProducts (MyAPI)" in 356.728ms (afa2e885)
+2021-08-25T00:29:37.7528600+07:00 0HMB74IU47HIF:00000002 [INF] Executed endpoint '"MyAPI.Controllers.ProductController.GetProducts (MyAPI)"' (99874f2b)
+2021-08-25T00:29:37.7672350+07:00 0HMB74IU47HIF:00000002 [INF] Request finished in 499.1645ms 200 application/json; charset=utf-8 (791a596a)
+2021-08-25T00:29:44.8015960+07:00 0HMB74IU47HIF:00000003 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/product/join   (ca22a1cb)
+2021-08-25T00:29:44.8332650+07:00 0HMB74IU47HIF:00000003 [INF] Executing endpoint '"MyAPI.Controllers.ProductController.GetProductsJoin (MyAPI)"' (500cc934)
+2021-08-25T00:29:44.9095160+07:00 0HMB74IU47HIF:00000003 [INF] Route matched with "{action = \"GetProductsJoin\", controller = \"Product\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.IActionResult GetProductsJoin()" on controller "MyAPI.Controllers.ProductController" ("MyAPI"). (122b2fdf)
+2021-08-25T00:29:44.9698870+07:00 0HMB74IU47HIF:00000003 [INF] Entity Framework Core "5.0.9" initialized '"DatabaseContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2021-08-25T00:29:45.2643590+07:00 0HMB74IU47HIF:00000003 [INF] Executed DbCommand ("122"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [p].[ProductID], [p].[CategoryID], [p].[Name], [p].[Price], [p].[Sale], [p].[SupplierID], [c].[CategoryID], [c].[Description], [c].[Name], [s].[ID], [s].[Name], [s].[Phone]
+FROM [Products] AS [p]
+INNER JOIN [Categories] AS [c] ON [p].[CategoryID] = [c].[CategoryID]
+INNER JOIN [Suppliers] AS [s] ON [p].[SupplierID] = [s].[ID]" (0723d8ff)
+2021-08-25T00:29:45.3298170+07:00 0HMB74IU47HIF:00000003 [INF] Executing ObjectResult, writing value of type '"System.Collections.Generic.List`1[[MyAPI.Models.Product, MyAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"'. (8a1b66c8)
+2021-08-25T00:29:45.3564480+07:00 0HMB74IU47HIF:00000003 [INF] Executed action "MyAPI.Controllers.ProductController.GetProductsJoin (MyAPI)" in 443.2985ms (afa2e885)
+2021-08-25T00:29:45.3582240+07:00 0HMB74IU47HIF:00000003 [INF] Executed endpoint '"MyAPI.Controllers.ProductController.GetProductsJoin (MyAPI)"' (99874f2b)
+2021-08-25T00:29:45.3665670+07:00 0HMB74IU47HIF:00000003 [INF] Request finished in 572.7169ms 200 application/json; charset=utf-8 (791a596a)
+2021-08-25T00:46:04.3253700+07:00  [INF] Entity Framework Core "5.0.9" initialized '"DatabaseContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2021-08-25T00:46:04.9952940+07:00  [INF] Executed DbCommand ("31"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT 1" (0723d8ff)
+2021-08-25T00:46:05.0437450+07:00  [INF] Executed DbCommand ("29"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0" (0723d8ff)
+2021-08-25T00:46:05.3547820+07:00  [INF] Executed DbCommand ("8"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Categories] AS [c]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END" (0723d8ff)
+2021-08-25T00:46:05.7489530+07:00  [INF] Now listening on: "http://localhost:5000" (d826f4b8)
+2021-08-25T00:46:05.7604650+07:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2021-08-25T00:46:05.7637850+07:00  [INF] Hosting environment: "Development" (c3307c92)
+2021-08-25T00:46:05.7657050+07:00  [INF] Content root path: "/Users/Mac/Projects/MyAPI/MyAPI" (b5d60022)
+2021-08-25T00:46:06.2806480+07:00 0HMB74S67KNBL:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:5000/   (ca22a1cb)
+2021-08-25T00:46:06.4722610+07:00 0HMB74S67KNBL:00000001 [INF] Request finished in 192.8022ms 404  (791a596a)
+2021-08-25T00:46:14.9863710+07:00 0HMB74S67KNBL:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/Halcon   (ca22a1cb)
+2021-08-25T00:46:15.0573230+07:00 0HMB74S67KNBL:00000002 [INF] Executing endpoint '"MyAPI.Controllers.HalconController.GetProducts (MyAPI)"' (500cc934)
+2021-08-25T00:46:15.1441950+07:00 0HMB74S67KNBL:00000002 [INF] Route matched with "{action = \"GetProducts\", controller = \"Halcon\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.IActionResult GetProducts()" on controller "MyAPI.Controllers.HalconController" ("MyAPI"). (122b2fdf)
+2021-08-25T00:46:15.1694340+07:00 0HMB74S67KNBL:00000002 [INF] Halcon Version  SpVision (28e157da)
+2021-08-25T00:46:15.1865380+07:00 0HMB74S67KNBL:00000002 [INF] Executing ObjectResult, writing value of type '"System.String"'. (8a1b66c8)
+2021-08-25T00:46:15.2029280+07:00 0HMB74S67KNBL:00000002 [INF] Executed action "MyAPI.Controllers.HalconController.GetProducts (MyAPI)" in 48.8256ms (afa2e885)
+2021-08-25T00:46:15.2043380+07:00 0HMB74S67KNBL:00000002 [INF] Executed endpoint '"MyAPI.Controllers.HalconController.GetProducts (MyAPI)"' (99874f2b)
+2021-08-25T00:46:15.2121300+07:00 0HMB74S67KNBL:00000002 [INF] Request finished in 235.8772ms 200 text/plain; charset=utf-8 (791a596a)
