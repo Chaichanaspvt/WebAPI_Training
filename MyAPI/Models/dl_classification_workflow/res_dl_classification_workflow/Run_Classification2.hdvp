@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hdevelop file_version="1.2" halcon_version="21.05.0.0">
+<procedure name="Run_Classification">
+<interface>
+<io>
+<par name="Image" base_type="iconic" dimension="0"/>
+</io>
+<oc>
+<par name="Result_name" base_type="ctrl" dimension="0"/>
+<par name="Result_Confiden" base_type="ctrl" dimension="0"/>
+</oc>
+</interface>
+<body>
+<l>PathModel := '/home/sp/WebApiHalcon/WebAPI_Training/MyAPI/Models/dl_classification_workflow/res_dl_classification_workflow/model_best.hdl'</l>
+<l>read_dl_model (PathModel, DLModelHandle)</l>
+<l>set_dl_model_param (DLModelHandle, 'runtime','cpu')</l>
+<l>create_dl_preprocess_param_from_model (DLModelHandle, 'none', 'full_domain', [], [], [], PathModel)</l>
+<l>gen_dl_samples_from_images (Image, DLSample)</l>
+<l>preprocess_dl_samples (DLSample, PathModel)</l>
+<l>apply_dl_model (DLModelHandle, DLSample, [], DLResult)</l>
+<l>get_dict_tuple(DLResult, 'classification_confidences', Confidences)</l>
+<l>get_dict_tuple(DLResult, 'classification_class_names', name)</l>
+<l>Result_name := name</l>
+<l>Result_Confiden := Confidences</l>
+<l>return ()</l>
+</body>
+<docu id="Run_Classification">
+<parameters>
+<parameter id="Image"/>
+<parameter id="Result_Confiden"/>
+<parameter id="Result_name"/>
+</parameters>
+</docu>
+</procedure>
+</hdevelop>

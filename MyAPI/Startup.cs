@@ -38,38 +38,15 @@ namespace MyAPI
             var servicesProvider = services.BuildServiceProvider();
             DatabaseInit.INIT(servicesProvider);
             
-            // Setup CORS
-            services.AddCors(options =>
-            {
-                //* Allow Services name of rule AllowAll
-                // Setup CORS
-                options.AddPolicy("AllowAll", builder => 
-                                builder.AllowAnyOrigin()
-                                .AllowAnyMethod()
-                                .AllowAnyHeader()
-                                .AllowCredentials());
-
-                // options.AddPolicy("AllowSpecific", builder =>
-                // {
-                //     builder.WithOrigins("http://localhost:4848", "http://www.codemobiles.com")
-                //            .AllowAnyHeader().AllowAnyMethod().AllowCredentials();
-                // });
-
-                // options.AddPolicy("AllowSpecificMethods", builder =>
-                // {
-                //     builder.WithOrigins("http://localhost:4848", "https://www.w3schools.com")
-                //            .WithMethods("POST", "PUT")
-                //            .AllowAnyHeader().AllowCredentials();
-                // });
-            });
+           
+    
 
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
-            // Allow all method
-            app.UseCors();
+         
 
             if (env.IsDevelopment())
             {

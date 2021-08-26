@@ -1,0 +1,566 @@
+2021-08-25T01:07:57.0384547+07:00  [INF] Entity Framework Core "5.0.9" initialized '"DatabaseContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2021-08-25T01:07:57.5328861+07:00  [INF] Executed DbCommand ("29"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT 1" (0723d8ff)
+2021-08-25T01:07:57.5723764+07:00  [INF] Executed DbCommand ("33"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0" (0723d8ff)
+2021-08-25T01:07:57.7655686+07:00  [INF] Executed DbCommand ("16"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Categories] AS [c]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END" (0723d8ff)
+2021-08-25T01:08:43.6990517+07:00  [INF] Entity Framework Core "5.0.9" initialized '"DatabaseContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2021-08-25T01:08:44.1194939+07:00  [INF] Executed DbCommand ("27"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT 1" (0723d8ff)
+2021-08-25T01:08:44.1503111+07:00  [INF] Executed DbCommand ("24"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0" (0723d8ff)
+2021-08-25T01:08:44.3315511+07:00  [INF] Executed DbCommand ("15"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Categories] AS [c]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END" (0723d8ff)
+2021-08-25T01:08:44.4634106+07:00  [INF] Now listening on: "http://localhost:5000" (d826f4b8)
+2021-08-25T01:08:44.4650383+07:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2021-08-25T01:08:44.4663292+07:00  [INF] Hosting environment: "Development" (c3307c92)
+2021-08-25T01:08:44.4675927+07:00  [INF] Content root path: "/home/sp/WebApiHalcon/WebAPI_Training/MyAPI" (b5d60022)
+2021-08-25T01:08:44.7949617+07:00 0HMB758R4Q03A:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:5000/   (ca22a1cb)
+2021-08-25T01:08:44.8238043+07:00 0HMB758R4Q03A:00000001 [INF] Request finished in 32.0751ms 404  (791a596a)
+2021-08-25T01:08:54.8238590+07:00 0HMB758R4Q03A:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/Halcon   (ca22a1cb)
+2021-08-25T01:08:54.8313874+07:00 0HMB758R4Q03A:00000002 [INF] Executing endpoint '"MyAPI.Controllers.HalconController.GetVersion (MyAPI)"' (500cc934)
+2021-08-25T01:08:54.8521134+07:00 0HMB758R4Q03A:00000002 [INF] Route matched with "{action = \"GetVersion\", controller = \"Halcon\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.IActionResult GetVersion()" on controller "MyAPI.Controllers.HalconController" ("MyAPI"). (122b2fdf)
+2021-08-25T01:08:54.8944450+07:00 0HMB758R4Q03A:00000002 [INF] Halcon Version  "21.05" (1ba48b08)
+2021-08-25T01:08:54.8982947+07:00 0HMB758R4Q03A:00000002 [INF] Executing ObjectResult, writing value of type '"HalconDotNet.HTuple"'. (8a1b66c8)
+2021-08-25T01:08:54.9189513+07:00 0HMB758R4Q03A:00000002 [INF] Executed action "MyAPI.Controllers.HalconController.GetVersion (MyAPI)" in 62.1103ms (afa2e885)
+2021-08-25T01:08:54.9194414+07:00 0HMB758R4Q03A:00000002 [INF] Executed endpoint '"MyAPI.Controllers.HalconController.GetVersion (MyAPI)"' (99874f2b)
+2021-08-25T01:08:54.9441370+07:00 0HMB758R4Q03A:00000002 [ERR] An unhandled exception has occurred while executing the request. (48a46595)
+HalconDotNet.HTupleAccessException: 'Illegal operation on Tuple' when accessing 'HalconDotNet.HTupleString'
+   at HalconDotNet.HTupleImplementation.get_IArr()
+   at System.Text.Json.JsonPropertyInfoCommon`4.GetValueAsObject(Object obj)
+   at System.Text.Json.JsonSerializer.HandleEnumerable(JsonClassInfo elementClassInfo, JsonSerializerOptions options, Utf8JsonWriter writer, WriteStack& state)
+   at System.Text.Json.JsonSerializer.Write(Utf8JsonWriter writer, Int32 originalWriterDepth, Int32 flushThreshold, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonSerializer.WriteAsyncCore(Stream utf8Json, Object value, Type inputType, JsonSerializerOptions options, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter.WriteResponseBodyAsync(OutputFormatterWriteContext context, Encoding selectedEncoding)
+   at Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter.WriteResponseBodyAsync(OutputFormatterWriteContext context, Encoding selectedEncoding)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|29_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2021-08-25T01:08:54.9694541+07:00 0HMB758R4Q03A:00000002 [INF] Request finished in 145.7606ms 500 text/html; charset=utf-8 (791a596a)
+2021-08-25T01:09:44.5460954+07:00  [INF] Entity Framework Core "5.0.9" initialized '"DatabaseContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2021-08-25T01:09:44.9739250+07:00  [INF] Executed DbCommand ("27"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT 1" (0723d8ff)
+2021-08-25T01:09:45.0091632+07:00  [INF] Executed DbCommand ("28"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0" (0723d8ff)
+2021-08-25T01:09:45.1949274+07:00  [INF] Executed DbCommand ("18"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Categories] AS [c]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END" (0723d8ff)
+2021-08-25T01:09:45.3289128+07:00  [INF] Now listening on: "http://localhost:5000" (d826f4b8)
+2021-08-25T01:09:45.3305372+07:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2021-08-25T01:09:45.3317138+07:00  [INF] Hosting environment: "Development" (c3307c92)
+2021-08-25T01:09:45.3331276+07:00  [INF] Content root path: "/home/sp/WebApiHalcon/WebAPI_Training/MyAPI" (b5d60022)
+2021-08-25T01:09:45.5363177+07:00 0HMB759D8LS9U:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:5000/   (ca22a1cb)
+2021-08-25T01:09:45.5637529+07:00 0HMB759D8LS9U:00000001 [INF] Request finished in 30.0674ms 404  (791a596a)
+2021-08-25T01:10:06.9121986+07:00 0HMB759D8LS9U:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/Halcon   (ca22a1cb)
+2021-08-25T01:10:06.9208959+07:00 0HMB759D8LS9U:00000002 [INF] Executing endpoint '"MyAPI.Controllers.HalconController.GetVersion (MyAPI)"' (500cc934)
+2021-08-25T01:10:06.9432677+07:00 0HMB759D8LS9U:00000002 [INF] Route matched with "{action = \"GetVersion\", controller = \"Halcon\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.IActionResult GetVersion()" on controller "MyAPI.Controllers.HalconController" ("MyAPI"). (122b2fdf)
+2021-08-25T01:10:06.9864284+07:00 0HMB759D8LS9U:00000002 [INF] Halcon Version  "21.05" (1ba48b08)
+2021-08-25T01:10:06.9900750+07:00 0HMB759D8LS9U:00000002 [INF] Executing ObjectResult, writing value of type '"System.String"'. (8a1b66c8)
+2021-08-25T01:10:06.9958252+07:00 0HMB759D8LS9U:00000002 [INF] Executed action "MyAPI.Controllers.HalconController.GetVersion (MyAPI)" in 47.8876ms (afa2e885)
+2021-08-25T01:10:06.9959186+07:00 0HMB759D8LS9U:00000002 [INF] Executed endpoint '"MyAPI.Controllers.HalconController.GetVersion (MyAPI)"' (99874f2b)
+2021-08-25T01:10:06.9979828+07:00 0HMB759D8LS9U:00000002 [INF] Request finished in 85.9728ms 200 text/plain; charset=utf-8 (791a596a)
+2021-08-25T01:10:51.6723983+07:00  [INF] Entity Framework Core "5.0.9" initialized '"DatabaseContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2021-08-25T01:10:52.1694299+07:00  [INF] Executed DbCommand ("28"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT 1" (0723d8ff)
+2021-08-25T01:10:52.2108414+07:00  [INF] Executed DbCommand ("34"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0" (0723d8ff)
+2021-08-25T01:10:52.3963453+07:00  [INF] Executed DbCommand ("15"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Categories] AS [c]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END" (0723d8ff)
+2021-08-25T01:10:52.5461333+07:00  [INF] Now listening on: "http://localhost:5000" (d826f4b8)
+2021-08-25T01:10:52.5478083+07:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2021-08-25T01:10:52.5493451+07:00  [INF] Hosting environment: "Development" (c3307c92)
+2021-08-25T01:10:52.5507844+07:00  [INF] Content root path: "/home/sp/WebApiHalcon/WebAPI_Training/MyAPI" (b5d60022)
+2021-08-25T01:10:52.7735629+07:00 0HMB75A19UI8F:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:5000/   (ca22a1cb)
+2021-08-25T01:10:52.8003209+07:00 0HMB75A19UI8F:00000001 [INF] Request finished in 29.336ms 404  (791a596a)
+2021-08-25T01:10:56.7934645+07:00 0HMB75A19UI8F:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/Halcon   (ca22a1cb)
+2021-08-25T01:10:56.8009730+07:00 0HMB75A19UI8F:00000002 [INF] Executing endpoint '"MyAPI.Controllers.HalconController.GetVersion (MyAPI)"' (500cc934)
+2021-08-25T01:10:56.8194558+07:00 0HMB75A19UI8F:00000002 [INF] Route matched with "{action = \"GetVersion\", controller = \"Halcon\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.IActionResult GetVersion()" on controller "MyAPI.Controllers.HalconController" ("MyAPI"). (122b2fdf)
+2021-08-25T01:10:56.8655550+07:00 0HMB75A19UI8F:00000002 [INF] Halcon Version  "21.05" (1ba48b08)
+2021-08-25T01:10:56.8690444+07:00 0HMB75A19UI8F:00000002 [INF] Executing ObjectResult, writing value of type '"System.String"'. (8a1b66c8)
+2021-08-25T01:10:56.8745489+07:00 0HMB75A19UI8F:00000002 [INF] Executed action "MyAPI.Controllers.HalconController.GetVersion (MyAPI)" in 50.6553ms (afa2e885)
+2021-08-25T01:10:56.8746378+07:00 0HMB75A19UI8F:00000002 [INF] Executed endpoint '"MyAPI.Controllers.HalconController.GetVersion (MyAPI)"' (99874f2b)
+2021-08-25T01:10:56.8766554+07:00 0HMB75A19UI8F:00000002 [INF] Request finished in 83.358ms 200 text/plain; charset=utf-8 (791a596a)
+2021-08-25T01:12:16.2367597+07:00  [INF] Entity Framework Core "5.0.9" initialized '"DatabaseContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2021-08-25T01:12:16.7590744+07:00  [INF] Executed DbCommand ("29"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT 1" (0723d8ff)
+2021-08-25T01:12:16.7998580+07:00  [INF] Executed DbCommand ("34"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0" (0723d8ff)
+2021-08-25T01:12:17.2368342+07:00  [INF] Executed DbCommand ("264"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Categories] AS [c]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END" (0723d8ff)
+2021-08-25T01:12:17.4286034+07:00  [INF] Now listening on: "http://localhost:5000" (d826f4b8)
+2021-08-25T01:12:17.4301954+07:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2021-08-25T01:12:17.4315719+07:00  [INF] Hosting environment: "Development" (c3307c92)
+2021-08-25T01:12:17.4330043+07:00  [INF] Content root path: "/home/sp/WebApiHalcon/WebAPI_Training/MyAPI" (b5d60022)
+2021-08-25T01:12:17.9603893+07:00 0HMB75AQMBDOI:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:5000/   (ca22a1cb)
+2021-08-25T01:12:17.9880801+07:00 0HMB75AQMBDOI:00000001 [INF] Request finished in 30.392ms 404  (791a596a)
+2021-08-25T01:12:22.3006110+07:00 0HMB75AQMBDOI:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/Halcon   (ca22a1cb)
+2021-08-25T01:12:22.3030801+07:00 0HMB75AQMBDOI:00000002 [INF] Request finished in 2.4966ms 404  (791a596a)
+2021-08-25T01:12:27.9128358+07:00 0HMB75AQMBDOI:00000003 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/Halcon/version   (ca22a1cb)
+2021-08-25T01:12:27.9212187+07:00 0HMB75AQMBDOI:00000003 [INF] Executing endpoint '"MyAPI.Controllers.HalconController.GetVersion (MyAPI)"' (500cc934)
+2021-08-25T01:12:27.9388851+07:00 0HMB75AQMBDOI:00000003 [INF] Route matched with "{action = \"GetVersion\", controller = \"Halcon\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.IActionResult GetVersion()" on controller "MyAPI.Controllers.HalconController" ("MyAPI"). (122b2fdf)
+2021-08-25T01:12:27.9823364+07:00 0HMB75AQMBDOI:00000003 [INF] Halcon Version  "21.05" (1ba48b08)
+2021-08-25T01:12:27.9861243+07:00 0HMB75AQMBDOI:00000003 [INF] Executing ObjectResult, writing value of type '"System.String"'. (8a1b66c8)
+2021-08-25T01:12:27.9922441+07:00 0HMB75AQMBDOI:00000003 [INF] Executed action "MyAPI.Controllers.HalconController.GetVersion (MyAPI)" in 48.522ms (afa2e885)
+2021-08-25T01:12:27.9923446+07:00 0HMB75AQMBDOI:00000003 [INF] Executed endpoint '"MyAPI.Controllers.HalconController.GetVersion (MyAPI)"' (99874f2b)
+2021-08-25T01:12:27.9945665+07:00 0HMB75AQMBDOI:00000003 [INF] Request finished in 82.3686ms 200 text/plain; charset=utf-8 (791a596a)
+2021-08-25T01:15:59.6645841+07:00  [INF] Entity Framework Core "5.0.9" initialized '"DatabaseContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2021-08-25T01:16:00.1663404+07:00  [INF] Executed DbCommand ("31"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT 1" (0723d8ff)
+2021-08-25T01:16:00.2074978+07:00  [INF] Executed DbCommand ("34"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0" (0723d8ff)
+2021-08-25T01:16:00.4362246+07:00  [INF] Executed DbCommand ("48"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Categories] AS [c]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END" (0723d8ff)
+2021-08-25T01:16:00.5661881+07:00  [INF] Now listening on: "http://localhost:5000" (d826f4b8)
+2021-08-25T01:16:00.5677544+07:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2021-08-25T01:16:00.5691923+07:00  [INF] Hosting environment: "Development" (c3307c92)
+2021-08-25T01:16:00.5709525+07:00  [INF] Content root path: "/home/sp/WebApiHalcon/WebAPI_Training/MyAPI" (b5d60022)
+2021-08-25T01:16:00.7749446+07:00 0HMB75CT38O44:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:5000/   (ca22a1cb)
+2021-08-25T01:16:00.8015319+07:00 0HMB75CT38O44:00000001 [INF] Request finished in 29.0945ms 404  (791a596a)
+2021-08-25T01:16:07.8928830+07:00 0HMB75CT38O44:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/Halcon   (ca22a1cb)
+2021-08-25T01:16:07.9009426+07:00 0HMB75CT38O44:00000002 [INF] Executing endpoint '"MyAPI.Controllers.HalconController.GetInfo (MyAPI)"' (500cc934)
+2021-08-25T01:16:07.9196785+07:00 0HMB75CT38O44:00000002 [INF] Route matched with "{action = \"GetInfo\", controller = \"Halcon\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.IActionResult GetInfo()" on controller "MyAPI.Controllers.HalconController" ("MyAPI"). (122b2fdf)
+2021-08-25T01:16:07.9239242+07:00 0HMB75CT38O44:00000002 [INF] Login This is Halcon Web API From SP vision  01:16:07 (98ee9476)
+2021-08-25T01:16:07.9273519+07:00 0HMB75CT38O44:00000002 [INF] Executing ObjectResult, writing value of type '"System.String"'. (8a1b66c8)
+2021-08-25T01:16:07.9329018+07:00 0HMB75CT38O44:00000002 [INF] Executed action "MyAPI.Controllers.HalconController.GetInfo (MyAPI)" in 8.8757ms (afa2e885)
+2021-08-25T01:16:07.9329876+07:00 0HMB75CT38O44:00000002 [INF] Executed endpoint '"MyAPI.Controllers.HalconController.GetInfo (MyAPI)"' (99874f2b)
+2021-08-25T01:16:07.9351656+07:00 0HMB75CT38O44:00000002 [INF] Request finished in 42.4496ms 200 text/plain; charset=utf-8 (791a596a)
+2021-08-25T01:16:17.4986743+07:00 0HMB75CT38O44:00000003 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/Halcon/version   (ca22a1cb)
+2021-08-25T01:16:17.5017935+07:00 0HMB75CT38O44:00000003 [INF] Executing endpoint '"MyAPI.Controllers.HalconController.GetVersion (MyAPI)"' (500cc934)
+2021-08-25T01:16:17.5044242+07:00 0HMB75CT38O44:00000003 [INF] Route matched with "{action = \"GetVersion\", controller = \"Halcon\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.IActionResult GetVersion()" on controller "MyAPI.Controllers.HalconController" ("MyAPI"). (122b2fdf)
+2021-08-25T01:16:17.5744278+07:00 0HMB75CT38O44:00000003 [INF] Halcon Version  "21.05" (1ba48b08)
+2021-08-25T01:16:17.5752659+07:00 0HMB75CT38O44:00000003 [INF] Executing ObjectResult, writing value of type '"System.String"'. (8a1b66c8)
+2021-08-25T01:16:17.5761750+07:00 0HMB75CT38O44:00000003 [INF] Executed action "MyAPI.Controllers.HalconController.GetVersion (MyAPI)" in 71.5735ms (afa2e885)
+2021-08-25T01:16:17.5762679+07:00 0HMB75CT38O44:00000003 [INF] Executed endpoint '"MyAPI.Controllers.HalconController.GetVersion (MyAPI)"' (99874f2b)
+2021-08-25T01:16:17.5765743+07:00 0HMB75CT38O44:00000003 [INF] Request finished in 79.4226ms 200 text/plain; charset=utf-8 (791a596a)
+2021-08-25T09:44:42.8298768+07:00  [INF] Entity Framework Core "5.0.9" initialized '"DatabaseContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2021-08-25T09:44:43.1967387+07:00  [INF] Executed DbCommand ("28"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT 1" (0723d8ff)
+2021-08-25T09:44:43.2302314+07:00  [INF] Executed DbCommand ("28"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0" (0723d8ff)
+2021-08-25T09:44:43.4046358+07:00  [INF] Executed DbCommand ("16"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Categories] AS [c]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END" (0723d8ff)
+2021-08-25T09:44:43.4836768+07:00  [INF] Now listening on: "http://localhost:5000" (d826f4b8)
+2021-08-25T09:44:43.4838574+07:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2021-08-25T09:44:43.4839029+07:00  [INF] Hosting environment: "Development" (c3307c92)
+2021-08-25T09:44:43.4839327+07:00  [INF] Content root path: "/home/sp/WebApiHalcon/WebAPI_Training/MyAPI" (b5d60022)
+2021-08-25T09:44:43.8512590+07:00 0HMB7E95M1VJJ:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:5000/   (ca22a1cb)
+2021-08-25T09:44:43.8723025+07:00 0HMB7E95M1VJJ:00000001 [INF] Request finished in 23.6024ms 404  (791a596a)
+2021-08-25T09:45:10.7819951+07:00 0HMB7E95M1VJJ:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/Halcon/SizeImage?pathImg=/opt/halcon/examples/images/color/citrus_fruits_01.png   (ca22a1cb)
+2021-08-25T09:45:10.8034551+07:00 0HMB7E95M1VJJ:00000002 [INF] Executing endpoint '"MyAPI.Controllers.HalconController.SizeImage (MyAPI)"' (500cc934)
+2021-08-25T09:45:10.8328048+07:00 0HMB7E95M1VJJ:00000002 [INF] Route matched with "{action = \"SizeImage\", controller = \"Halcon\"}". Executing controller action with signature "System.String SizeImage(System.String[])" on controller "MyAPI.Controllers.HalconController" ("MyAPI"). (122b2fdf)
+2021-08-25T09:45:10.9458758+07:00 0HMB7E95M1VJJ:00000002 [INF] Executing ObjectResult, writing value of type '"System.String"'. (8a1b66c8)
+2021-08-25T09:45:10.9506208+07:00 0HMB7E95M1VJJ:00000002 [INF] Executed action "MyAPI.Controllers.HalconController.SizeImage (MyAPI)" in 113.7524ms (afa2e885)
+2021-08-25T09:45:10.9507057+07:00 0HMB7E95M1VJJ:00000002 [INF] Executed endpoint '"MyAPI.Controllers.HalconController.SizeImage (MyAPI)"' (99874f2b)
+2021-08-25T09:45:10.9524865+07:00 0HMB7E95M1VJJ:00000002 [INF] Request finished in 171.1314ms 200 text/plain; charset=utf-8 (791a596a)
+2021-08-25T10:44:26.1235145+07:00  [INF] Entity Framework Core "5.0.9" initialized '"DatabaseContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2021-08-25T10:44:26.6170727+07:00  [INF] Executed DbCommand ("40"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT 1" (0723d8ff)
+2021-08-25T10:44:26.6544282+07:00  [INF] Executed DbCommand ("30"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0" (0723d8ff)
+2021-08-25T10:44:26.8547005+07:00  [INF] Executed DbCommand ("17"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Categories] AS [c]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END" (0723d8ff)
+2021-08-25T10:44:26.9998089+07:00  [INF] Now listening on: "http://localhost:5000" (d826f4b8)
+2021-08-25T10:44:27.0015278+07:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2021-08-25T10:44:27.0030584+07:00  [INF] Hosting environment: "Development" (c3307c92)
+2021-08-25T10:44:27.0044833+07:00  [INF] Content root path: "/home/sp/WebApiHalcon/WebAPI_Training/MyAPI" (b5d60022)
+2021-08-25T10:44:31.3471944+07:00 0HMB7FAIQK1SI:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:5000/   (ca22a1cb)
+2021-08-25T10:44:31.3844438+07:00 0HMB7FAIQK1SI:00000001 [INF] Request finished in 39.8729ms 404  (791a596a)
+2021-08-25T10:45:05.0520813+07:00 0HMB7FAIQK1SI:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/Halcon/SizeImage?pathImg=/opt/halcon/examples/images/color/citrus_fruits_01.png   (ca22a1cb)
+2021-08-25T10:45:05.0634510+07:00 0HMB7FAIQK1SI:00000002 [INF] Executing endpoint '"MyAPI.Controllers.HalconController.SizeImage (MyAPI)"' (500cc934)
+2021-08-25T10:45:05.0938117+07:00 0HMB7FAIQK1SI:00000002 [INF] Route matched with "{action = \"SizeImage\", controller = \"Halcon\"}". Executing controller action with signature "System.String SizeImage(System.String[])" on controller "MyAPI.Controllers.HalconController" ("MyAPI"). (122b2fdf)
+2021-08-25T10:45:05.1571326+07:00 0HMB7FAIQK1SI:00000002 [INF] Executing ObjectResult, writing value of type '"System.String"'. (8a1b66c8)
+2021-08-25T10:45:05.1629143+07:00 0HMB7FAIQK1SI:00000002 [INF] Executed action "MyAPI.Controllers.HalconController.SizeImage (MyAPI)" in 64.4237ms (afa2e885)
+2021-08-25T10:45:05.1630370+07:00 0HMB7FAIQK1SI:00000002 [INF] Executed endpoint '"MyAPI.Controllers.HalconController.SizeImage (MyAPI)"' (99874f2b)
+2021-08-25T10:45:05.1652840+07:00 0HMB7FAIQK1SI:00000002 [INF] Request finished in 113.3286ms 200 text/plain; charset=utf-8 (791a596a)
+2021-08-25T10:45:05.1961597+07:00 0HMB7FAIQK1SI:00000003 [INF] Request starting HTTP/1.1 GET http://localhost:5000/favicon.ico   (ca22a1cb)
+2021-08-25T10:45:05.1964270+07:00 0HMB7FAIQK1SI:00000003 [INF] Request finished in 0.2806ms 404  (791a596a)
+2021-08-25T10:46:10.0964601+07:00 0HMB7FAIQK1SI:00000004 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/Halcon/DL/Classify?pathImg=/opt/halcon/examples/images/color/citrus_fruits_01.png   (ca22a1cb)
+2021-08-25T10:46:10.0986009+07:00 0HMB7FAIQK1SI:00000004 [INF] Executing endpoint '"MyAPI.Controllers.HalconController.RunDL (MyAPI)"' (500cc934)
+2021-08-25T10:46:10.1029802+07:00 0HMB7FAIQK1SI:00000004 [INF] Route matched with "{action = \"RunDL\", controller = \"Halcon\"}". Executing controller action with signature "System.String RunDL(System.String[])" on controller "MyAPI.Controllers.HalconController" ("MyAPI"). (122b2fdf)
+2021-08-25T11:01:19.8713330+07:00  [INF] Entity Framework Core "5.0.9" initialized '"DatabaseContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2021-08-25T11:01:20.3460155+07:00  [INF] Executed DbCommand ("29"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT 1" (0723d8ff)
+2021-08-25T11:01:20.3824672+07:00  [INF] Executed DbCommand ("29"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0" (0723d8ff)
+2021-08-25T11:01:20.5848646+07:00  [INF] Executed DbCommand ("17"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Categories] AS [c]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END" (0723d8ff)
+2021-08-25T11:01:20.7279771+07:00  [INF] Now listening on: "http://localhost:5000" (d826f4b8)
+2021-08-25T11:01:20.7298972+07:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2021-08-25T11:01:20.7314112+07:00  [INF] Hosting environment: "Development" (c3307c92)
+2021-08-25T11:01:20.7330202+07:00  [INF] Content root path: "/home/sp/WebApiHalcon/WebAPI_Training/MyAPI" (b5d60022)
+2021-08-25T11:01:20.9075216+07:00 0HMB7FJVMUVIV:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:5000/   (ca22a1cb)
+2021-08-25T11:01:20.9375014+07:00 0HMB7FJVMUVIV:00000001 [INF] Request finished in 33.1284ms 404  (791a596a)
+2021-08-25T11:01:26.3831816+07:00 0HMB7FJVMUVIV:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/Halcon/DL/Classify?pathImg=/opt/halcon/examples/images/color/citrus_fruits_01.png   (ca22a1cb)
+2021-08-25T11:01:26.3900385+07:00 0HMB7FJVMUVIV:00000002 [INF] Executing endpoint '"MyAPI.Controllers.HalconController.RunDL (MyAPI)"' (500cc934)
+2021-08-25T11:01:26.4166310+07:00 0HMB7FJVMUVIV:00000002 [INF] Route matched with "{action = \"RunDL\", controller = \"Halcon\"}". Executing controller action with signature "System.String RunDL(System.String[])" on controller "MyAPI.Controllers.HalconController" ("MyAPI"). (122b2fdf)
+2021-08-25T11:02:05.0650030+07:00  [INF] Entity Framework Core "5.0.9" initialized '"DatabaseContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2021-08-25T11:02:05.5921301+07:00  [INF] Executed DbCommand ("31"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT 1" (0723d8ff)
+2021-08-25T11:02:05.6276177+07:00  [INF] Executed DbCommand ("29"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0" (0723d8ff)
+2021-08-25T11:02:05.8239018+07:00  [INF] Executed DbCommand ("19"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Categories] AS [c]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END" (0723d8ff)
+2021-08-25T11:02:05.9777553+07:00  [INF] Now listening on: "http://localhost:5000" (d826f4b8)
+2021-08-25T11:02:05.9797745+07:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2021-08-25T11:02:05.9812758+07:00  [INF] Hosting environment: "Development" (c3307c92)
+2021-08-25T11:02:05.9827116+07:00  [INF] Content root path: "/home/sp/WebApiHalcon/WebAPI_Training/MyAPI" (b5d60022)
+2021-08-25T11:02:06.1507188+07:00 0HMB7FKD6DPBU:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:5000/   (ca22a1cb)
+2021-08-25T11:02:06.1811520+07:00 0HMB7FKD6DPBU:00000001 [INF] Request finished in 33.1844ms 404  (791a596a)
+2021-08-25T11:02:08.5085105+07:00 0HMB7FKD6DPBU:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/Halcon/DL/Classify?pathImg=/opt/halcon/examples/images/color/citrus_fruits_01.png   (ca22a1cb)
+2021-08-25T11:02:08.5165485+07:00 0HMB7FKD6DPBU:00000002 [INF] Executing endpoint '"MyAPI.Controllers.HalconController.RunDL (MyAPI)"' (500cc934)
+2021-08-25T11:02:08.5447301+07:00 0HMB7FKD6DPBU:00000002 [INF] Route matched with "{action = \"RunDL\", controller = \"Halcon\"}". Executing controller action with signature "System.String RunDL(System.String[])" on controller "MyAPI.Controllers.HalconController" ("MyAPI"). (122b2fdf)
+2021-08-25T11:02:33.5675558+07:00  [INF] Entity Framework Core "5.0.9" initialized '"DatabaseContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2021-08-25T11:02:34.0635668+07:00  [INF] Executed DbCommand ("29"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT 1" (0723d8ff)
+2021-08-25T11:02:34.0987067+07:00  [INF] Executed DbCommand ("28"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0" (0723d8ff)
+2021-08-25T11:02:34.2996260+07:00  [INF] Executed DbCommand ("15"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Categories] AS [c]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END" (0723d8ff)
+2021-08-25T11:02:34.4451583+07:00  [INF] Now listening on: "http://localhost:5000" (d826f4b8)
+2021-08-25T11:02:34.4661442+07:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2021-08-25T11:02:34.4678536+07:00  [INF] Hosting environment: "Development" (c3307c92)
+2021-08-25T11:02:34.4696745+07:00  [INF] Content root path: "/home/sp/WebApiHalcon/WebAPI_Training/MyAPI" (b5d60022)
+2021-08-25T11:02:34.6480384+07:00 0HMB7FKLLU87U:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:5000/   (ca22a1cb)
+2021-08-25T11:02:34.6782917+07:00 0HMB7FKLLU87U:00000001 [INF] Request finished in 33.1177ms 404  (791a596a)
+2021-08-25T11:02:36.9856641+07:00 0HMB7FKLLU87U:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/Halcon/DL/Classify?pathImg=/opt/halcon/examples/images/color/citrus_fruits_01.png   (ca22a1cb)
+2021-08-25T11:02:36.9929283+07:00 0HMB7FKLLU87U:00000002 [INF] Executing endpoint '"MyAPI.Controllers.HalconController.RunDL (MyAPI)"' (500cc934)
+2021-08-25T11:02:37.0216670+07:00 0HMB7FKLLU87U:00000002 [INF] Route matched with "{action = \"RunDL\", controller = \"Halcon\"}". Executing controller action with signature "System.String RunDL(System.String[])" on controller "MyAPI.Controllers.HalconController" ("MyAPI"). (122b2fdf)
+2021-08-25T11:02:38.4446750+07:00 0HMB7FKLLU87U:00000002 [INF] Executing ObjectResult, writing value of type '"System.String"'. (8a1b66c8)
+2021-08-25T11:02:38.4539360+07:00 0HMB7FKLLU87U:00000002 [INF] Executed action "MyAPI.Controllers.HalconController.RunDL (MyAPI)" in 1425.7446ms (afa2e885)
+2021-08-25T11:02:38.4542921+07:00 0HMB7FKLLU87U:00000002 [INF] Executed endpoint '"MyAPI.Controllers.HalconController.RunDL (MyAPI)"' (99874f2b)
+2021-08-25T11:02:38.4579225+07:00 0HMB7FKLLU87U:00000002 [INF] Request finished in 1472.3539ms 200 text/plain; charset=utf-8 (791a596a)
+2021-08-25T11:12:25.5910283+07:00 0HMB7FKLLU880:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/Halcon/SizeImage?pathImg=/opt/halcon/examples/images/color/citrus_fruits_01.png   (ca22a1cb)
+2021-08-25T11:12:25.5938750+07:00 0HMB7FKLLU880:00000001 [INF] Executing endpoint '"MyAPI.Controllers.HalconController.SizeImage (MyAPI)"' (500cc934)
+2021-08-25T11:12:25.5989271+07:00 0HMB7FKLLU880:00000001 [INF] Route matched with "{action = \"SizeImage\", controller = \"Halcon\"}". Executing controller action with signature "System.String SizeImage(System.String[])" on controller "MyAPI.Controllers.HalconController" ("MyAPI"). (122b2fdf)
+2021-08-25T11:12:25.6108990+07:00 0HMB7FKLLU880:00000001 [INF] Executing ObjectResult, writing value of type '"System.String"'. (8a1b66c8)
+2021-08-25T11:12:25.6114833+07:00 0HMB7FKLLU880:00000001 [INF] Executed action "MyAPI.Controllers.HalconController.SizeImage (MyAPI)" in 12.4012ms (afa2e885)
+2021-08-25T11:12:25.6115476+07:00 0HMB7FKLLU880:00000001 [INF] Executed endpoint '"MyAPI.Controllers.HalconController.SizeImage (MyAPI)"' (99874f2b)
+2021-08-25T11:12:25.6118115+07:00 0HMB7FKLLU880:00000001 [INF] Request finished in 21.2439ms 200 text/plain; charset=utf-8 (791a596a)
+2021-08-25T11:13:35.7031808+07:00 0HMB7FKLLU880:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/Halcon/version   (ca22a1cb)
+2021-08-25T11:13:35.7037153+07:00 0HMB7FKLLU880:00000002 [INF] Executing endpoint '"MyAPI.Controllers.HalconController.GetVersion (MyAPI)"' (500cc934)
+2021-08-25T11:13:35.7059316+07:00 0HMB7FKLLU880:00000002 [INF] Route matched with "{action = \"GetVersion\", controller = \"Halcon\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.IActionResult GetVersion()" on controller "MyAPI.Controllers.HalconController" ("MyAPI"). (122b2fdf)
+2021-08-25T11:13:35.7105398+07:00 0HMB7FKLLU880:00000002 [INF] Halcon Version  "21.05" (1ba48b08)
+2021-08-25T11:13:35.7110437+07:00 0HMB7FKLLU880:00000002 [INF] Executing ObjectResult, writing value of type '"System.String"'. (8a1b66c8)
+2021-08-25T11:13:35.7114591+07:00 0HMB7FKLLU880:00000002 [INF] Executed action "MyAPI.Controllers.HalconController.GetVersion (MyAPI)" in 5.4129ms (afa2e885)
+2021-08-25T11:13:35.7115235+07:00 0HMB7FKLLU880:00000002 [INF] Executed endpoint '"MyAPI.Controllers.HalconController.GetVersion (MyAPI)"' (99874f2b)
+2021-08-25T11:13:35.7117044+07:00 0HMB7FKLLU880:00000002 [INF] Request finished in 9.1354ms 200 text/plain; charset=utf-8 (791a596a)
+2021-08-25T11:31:29.9351513+07:00 0HMB7FKLLU883:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/Halcon/version   (ca22a1cb)
+2021-08-25T11:31:29.9359624+07:00 0HMB7FKLLU883:00000001 [INF] Executing endpoint '"MyAPI.Controllers.HalconController.GetVersion (MyAPI)"' (500cc934)
+2021-08-25T11:31:29.9368317+07:00 0HMB7FKLLU883:00000001 [INF] Route matched with "{action = \"GetVersion\", controller = \"Halcon\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.IActionResult GetVersion()" on controller "MyAPI.Controllers.HalconController" ("MyAPI"). (122b2fdf)
+2021-08-25T11:31:29.9398824+07:00 0HMB7FKLLU883:00000001 [INF] Halcon Version  "21.05" (1ba48b08)
+2021-08-25T11:31:29.9403253+07:00 0HMB7FKLLU883:00000001 [INF] Executing ObjectResult, writing value of type '"System.String"'. (8a1b66c8)
+2021-08-25T11:31:29.9407904+07:00 0HMB7FKLLU883:00000001 [INF] Executed action "MyAPI.Controllers.HalconController.GetVersion (MyAPI)" in 3.7403ms (afa2e885)
+2021-08-25T11:31:29.9408479+07:00 0HMB7FKLLU883:00000001 [INF] Executed endpoint '"MyAPI.Controllers.HalconController.GetVersion (MyAPI)"' (99874f2b)
+2021-08-25T11:31:29.9411048+07:00 0HMB7FKLLU883:00000001 [INF] Request finished in 6.1849ms 200 text/plain; charset=utf-8 (791a596a)
+2021-08-25T11:32:15.7732288+07:00 0HMB7FKLLU883:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/Halcon/DL/Classify?pathImg=/opt/halcon/examples/images/color/citrus_fruits_01.png   (ca22a1cb)
+2021-08-25T11:32:15.7749789+07:00 0HMB7FKLLU883:00000002 [INF] Executing endpoint '"MyAPI.Controllers.HalconController.RunDL (MyAPI)"' (500cc934)
+2021-08-25T11:32:15.7772301+07:00 0HMB7FKLLU883:00000002 [INF] Route matched with "{action = \"RunDL\", controller = \"Halcon\"}". Executing controller action with signature "System.String RunDL(System.String[])" on controller "MyAPI.Controllers.HalconController" ("MyAPI"). (122b2fdf)
+2021-08-25T11:32:16.0286888+07:00 0HMB7FKLLU883:00000002 [INF] Executing ObjectResult, writing value of type '"System.String"'. (8a1b66c8)
+2021-08-25T11:32:16.0328916+07:00 0HMB7FKLLU883:00000002 [INF] Executed action "MyAPI.Controllers.HalconController.RunDL (MyAPI)" in 252.1503ms (afa2e885)
+2021-08-25T11:32:16.0334935+07:00 0HMB7FKLLU883:00000002 [INF] Executed endpoint '"MyAPI.Controllers.HalconController.RunDL (MyAPI)"' (99874f2b)
+2021-08-25T11:32:16.0343515+07:00 0HMB7FKLLU883:00000002 [INF] Request finished in 261.4866ms 200 text/plain; charset=utf-8 (791a596a)
+2021-08-25T11:32:47.2492769+07:00 0HMB7FKLLU883:00000003 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/Halcon/SizeImage?pathImg=/opt/halcon/examples/images/color/citrus_fruits_01.png   (ca22a1cb)
+2021-08-25T11:32:47.2498678+07:00 0HMB7FKLLU883:00000003 [INF] Executing endpoint '"MyAPI.Controllers.HalconController.SizeImage (MyAPI)"' (500cc934)
+2021-08-25T11:32:47.2502794+07:00 0HMB7FKLLU883:00000003 [INF] Route matched with "{action = \"SizeImage\", controller = \"Halcon\"}". Executing controller action with signature "System.String SizeImage(System.String[])" on controller "MyAPI.Controllers.HalconController" ("MyAPI"). (122b2fdf)
+2021-08-25T11:32:47.2599072+07:00 0HMB7FKLLU883:00000003 [INF] Executing ObjectResult, writing value of type '"System.String"'. (8a1b66c8)
+2021-08-25T11:32:47.2604253+07:00 0HMB7FKLLU883:00000003 [INF] Executed action "MyAPI.Controllers.HalconController.SizeImage (MyAPI)" in 10.0097ms (afa2e885)
+2021-08-25T11:32:47.2604705+07:00 0HMB7FKLLU883:00000003 [INF] Executed endpoint '"MyAPI.Controllers.HalconController.SizeImage (MyAPI)"' (99874f2b)
+2021-08-25T11:32:47.2607978+07:00 0HMB7FKLLU883:00000003 [INF] Request finished in 11.5787ms 200 text/plain; charset=utf-8 (791a596a)
+2021-08-25T11:33:28.6183360+07:00 0HMB7FKLLU883:00000004 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/Halcon/DL/Classify?pathImg=/opt/halcon/examples/images/color/citrus_fruits_01.png   (ca22a1cb)
+2021-08-25T11:33:28.6187865+07:00 0HMB7FKLLU883:00000004 [INF] Executing endpoint '"MyAPI.Controllers.HalconController.RunDL (MyAPI)"' (500cc934)
+2021-08-25T11:33:28.6192868+07:00 0HMB7FKLLU883:00000004 [INF] Route matched with "{action = \"RunDL\", controller = \"Halcon\"}". Executing controller action with signature "System.String RunDL(System.String[])" on controller "MyAPI.Controllers.HalconController" ("MyAPI"). (122b2fdf)
+2021-08-25T11:33:28.8196830+07:00 0HMB7FKLLU883:00000004 [INF] Executing ObjectResult, writing value of type '"System.String"'. (8a1b66c8)
+2021-08-25T11:33:28.8225457+07:00 0HMB7FKLLU883:00000004 [INF] Executed action "MyAPI.Controllers.HalconController.RunDL (MyAPI)" in 200.9877ms (afa2e885)
+2021-08-25T11:33:28.8243030+07:00 0HMB7FKLLU883:00000004 [INF] Executed endpoint '"MyAPI.Controllers.HalconController.RunDL (MyAPI)"' (99874f2b)
+2021-08-25T11:33:28.8262140+07:00 0HMB7FKLLU883:00000004 [INF] Request finished in 207.8286ms 200 text/plain; charset=utf-8 (791a596a)
+2021-08-25T11:34:13.3615108+07:00 0HMB7FKLLU883:00000005 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/Halcon/DL/Classify?pathImg=/opt/halcon/examples/images/color/citrus_fruits_01.png   (ca22a1cb)
+2021-08-25T11:34:13.3618871+07:00 0HMB7FKLLU883:00000005 [INF] Executing endpoint '"MyAPI.Controllers.HalconController.RunDL (MyAPI)"' (500cc934)
+2021-08-25T11:34:13.3623316+07:00 0HMB7FKLLU883:00000005 [INF] Route matched with "{action = \"RunDL\", controller = \"Halcon\"}". Executing controller action with signature "System.String RunDL(System.String[])" on controller "MyAPI.Controllers.HalconController" ("MyAPI"). (122b2fdf)
+2021-08-25T11:34:13.5247942+07:00 0HMB7FKLLU883:00000005 [INF] Executing ObjectResult, writing value of type '"System.String"'. (8a1b66c8)
+2021-08-25T11:34:13.5256370+07:00 0HMB7FKLLU883:00000005 [INF] Executed action "MyAPI.Controllers.HalconController.RunDL (MyAPI)" in 163.1851ms (afa2e885)
+2021-08-25T11:34:13.5284120+07:00 0HMB7FKLLU883:00000005 [INF] Executed endpoint '"MyAPI.Controllers.HalconController.RunDL (MyAPI)"' (99874f2b)
+2021-08-25T11:34:13.5295872+07:00 0HMB7FKLLU883:00000005 [INF] Request finished in 168.2682ms 200 text/plain; charset=utf-8 (791a596a)
+2021-08-25T11:36:58.0935031+07:00 0HMB7FKLLU883:00000006 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/product   (ca22a1cb)
+2021-08-25T11:36:58.0938746+07:00 0HMB7FKLLU883:00000006 [INF] Executing endpoint '"MyAPI.Controllers.ProductController.GetProducts (MyAPI)"' (500cc934)
+2021-08-25T11:36:58.0969795+07:00 0HMB7FKLLU883:00000006 [INF] Route matched with "{action = \"GetProducts\", controller = \"Product\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.IActionResult GetProducts()" on controller "MyAPI.Controllers.ProductController" ("MyAPI"). (122b2fdf)
+2021-08-25T11:36:58.1008870+07:00 0HMB7FKLLU883:00000006 [INF] Entity Framework Core "5.0.9" initialized '"DatabaseContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2021-08-25T11:36:58.2922644+07:00 0HMB7FKLLU883:00000006 [INF] Executed DbCommand ("17"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [p].[ProductID], [p].[CategoryID], [p].[Name], [p].[Price], [p].[Sale], [p].[SupplierID]
+FROM [Products] AS [p]" (0723d8ff)
+2021-08-25T11:36:58.3396986+07:00 0HMB7FKLLU883:00000006 [INF] result count : 2 (fccaf79a)
+2021-08-25T11:36:58.3425095+07:00 0HMB7FKLLU883:00000006 [INF] Executing ObjectResult, writing value of type '"System.Collections.Generic.List`1[[MyAPI.Models.Product, MyAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"'. (8a1b66c8)
+2021-08-25T11:36:58.3533343+07:00 0HMB7FKLLU883:00000006 [INF] Executed action "MyAPI.Controllers.ProductController.GetProducts (MyAPI)" in 256.2627ms (afa2e885)
+2021-08-25T11:36:58.3534367+07:00 0HMB7FKLLU883:00000006 [INF] Executed endpoint '"MyAPI.Controllers.ProductController.GetProducts (MyAPI)"' (99874f2b)
+2021-08-25T11:36:58.3575559+07:00 0HMB7FKLLU883:00000006 [INF] Request finished in 264.1513ms 200 application/json; charset=utf-8 (791a596a)
+2021-08-25T11:37:31.0282585+07:00 0HMB7FKLLU883:00000007 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/Halcon/SizeImage?pathImg=/opt/halcon/examples/images/color/citrus_fruits_01.png   (ca22a1cb)
+2021-08-25T11:37:31.0287144+07:00 0HMB7FKLLU883:00000007 [INF] Executing endpoint '"MyAPI.Controllers.HalconController.SizeImage (MyAPI)"' (500cc934)
+2021-08-25T11:37:31.0291713+07:00 0HMB7FKLLU883:00000007 [INF] Route matched with "{action = \"SizeImage\", controller = \"Halcon\"}". Executing controller action with signature "System.String SizeImage(System.String[])" on controller "MyAPI.Controllers.HalconController" ("MyAPI"). (122b2fdf)
+2021-08-25T11:37:31.0460085+07:00 0HMB7FKLLU883:00000007 [INF] Executing ObjectResult, writing value of type '"System.String"'. (8a1b66c8)
+2021-08-25T11:37:31.0467016+07:00 0HMB7FKLLU883:00000007 [INF] Executed action "MyAPI.Controllers.HalconController.SizeImage (MyAPI)" in 17.3662ms (afa2e885)
+2021-08-25T11:37:31.0494761+07:00 0HMB7FKLLU883:00000007 [INF] Executed endpoint '"MyAPI.Controllers.HalconController.SizeImage (MyAPI)"' (99874f2b)
+2021-08-25T11:37:31.0499451+07:00 0HMB7FKLLU883:00000007 [INF] Request finished in 21.6184ms 200 text/plain; charset=utf-8 (791a596a)
+2021-08-25T11:37:42.0777062+07:00 0HMB7FKLLU883:00000008 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/Halcon/DL/Classify?pathImg=/opt/halcon/examples/images/color/citrus_fruits_01.png   (ca22a1cb)
+2021-08-25T11:37:42.0782257+07:00 0HMB7FKLLU883:00000008 [INF] Executing endpoint '"MyAPI.Controllers.HalconController.RunDL (MyAPI)"' (500cc934)
+2021-08-25T11:37:42.0788262+07:00 0HMB7FKLLU883:00000008 [INF] Route matched with "{action = \"RunDL\", controller = \"Halcon\"}". Executing controller action with signature "System.String RunDL(System.String[])" on controller "MyAPI.Controllers.HalconController" ("MyAPI"). (122b2fdf)
+2021-08-25T11:37:42.2553787+07:00 0HMB7FKLLU883:00000008 [INF] Executing ObjectResult, writing value of type '"System.String"'. (8a1b66c8)
+2021-08-25T11:37:42.2578267+07:00 0HMB7FKLLU883:00000008 [INF] Executed action "MyAPI.Controllers.HalconController.RunDL (MyAPI)" in 178.8605ms (afa2e885)
+2021-08-25T11:37:42.2578859+07:00 0HMB7FKLLU883:00000008 [INF] Executed endpoint '"MyAPI.Controllers.HalconController.RunDL (MyAPI)"' (99874f2b)
+2021-08-25T11:37:42.2582761+07:00 0HMB7FKLLU883:00000008 [INF] Request finished in 180.6764ms 200 text/plain; charset=utf-8 (791a596a)
+2021-08-25T11:37:45.6899991+07:00 0HMB7FKLLU883:00000009 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/Halcon/DL/Classify?pathImg=/opt/halcon/examples/images/color/citrus_fruits_01.png   (ca22a1cb)
+2021-08-25T11:37:45.6907388+07:00 0HMB7FKLLU883:00000009 [INF] Executing endpoint '"MyAPI.Controllers.HalconController.RunDL (MyAPI)"' (500cc934)
+2021-08-25T11:37:45.6915680+07:00 0HMB7FKLLU883:00000009 [INF] Route matched with "{action = \"RunDL\", controller = \"Halcon\"}". Executing controller action with signature "System.String RunDL(System.String[])" on controller "MyAPI.Controllers.HalconController" ("MyAPI"). (122b2fdf)
+2021-08-25T11:37:45.9084307+07:00 0HMB7FKLLU883:00000009 [INF] Executing ObjectResult, writing value of type '"System.String"'. (8a1b66c8)
+2021-08-25T11:37:45.9091710+07:00 0HMB7FKLLU883:00000009 [INF] Executed action "MyAPI.Controllers.HalconController.RunDL (MyAPI)" in 217.4852ms (afa2e885)
+2021-08-25T11:37:45.9094353+07:00 0HMB7FKLLU883:00000009 [INF] Executed endpoint '"MyAPI.Controllers.HalconController.RunDL (MyAPI)"' (99874f2b)
+2021-08-25T11:37:45.9098409+07:00 0HMB7FKLLU883:00000009 [INF] Request finished in 219.9963ms 200 text/plain; charset=utf-8 (791a596a)
+2021-08-25T11:37:46.3267365+07:00 0HMB7FKLLU883:0000000A [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/Halcon/DL/Classify?pathImg=/opt/halcon/examples/images/color/citrus_fruits_01.png   (ca22a1cb)
+2021-08-25T11:37:46.3273885+07:00 0HMB7FKLLU883:0000000A [INF] Executing endpoint '"MyAPI.Controllers.HalconController.RunDL (MyAPI)"' (500cc934)
+2021-08-25T11:37:46.3281922+07:00 0HMB7FKLLU883:0000000A [INF] Route matched with "{action = \"RunDL\", controller = \"Halcon\"}". Executing controller action with signature "System.String RunDL(System.String[])" on controller "MyAPI.Controllers.HalconController" ("MyAPI"). (122b2fdf)
+2021-08-25T11:37:46.5924574+07:00 0HMB7FKLLU883:0000000A [INF] Executing ObjectResult, writing value of type '"System.String"'. (8a1b66c8)
+2021-08-25T11:37:46.5932655+07:00 0HMB7FKLLU883:0000000A [INF] Executed action "MyAPI.Controllers.HalconController.RunDL (MyAPI)" in 264.9246ms (afa2e885)
+2021-08-25T11:37:46.5935503+07:00 0HMB7FKLLU883:0000000A [INF] Executed endpoint '"MyAPI.Controllers.HalconController.RunDL (MyAPI)"' (99874f2b)
+2021-08-25T11:37:46.5940070+07:00 0HMB7FKLLU883:0000000A [INF] Request finished in 267.4359ms 200 text/plain; charset=utf-8 (791a596a)
+2021-08-25T11:37:47.3441959+07:00 0HMB7FKLLU883:0000000B [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/Halcon/DL/Classify?pathImg=/opt/halcon/examples/images/color/citrus_fruits_01.png   (ca22a1cb)
+2021-08-25T11:37:47.3449134+07:00 0HMB7FKLLU883:0000000B [INF] Executing endpoint '"MyAPI.Controllers.HalconController.RunDL (MyAPI)"' (500cc934)
+2021-08-25T11:37:47.3457098+07:00 0HMB7FKLLU883:0000000B [INF] Route matched with "{action = \"RunDL\", controller = \"Halcon\"}". Executing controller action with signature "System.String RunDL(System.String[])" on controller "MyAPI.Controllers.HalconController" ("MyAPI"). (122b2fdf)
+2021-08-25T11:37:47.5429312+07:00 0HMB7FKLLU883:0000000B [INF] Executing ObjectResult, writing value of type '"System.String"'. (8a1b66c8)
+2021-08-25T11:37:47.5434021+07:00 0HMB7FKLLU883:0000000B [INF] Executed action "MyAPI.Controllers.HalconController.RunDL (MyAPI)" in 197.5238ms (afa2e885)
+2021-08-25T11:37:47.5434455+07:00 0HMB7FKLLU883:0000000B [INF] Executed endpoint '"MyAPI.Controllers.HalconController.RunDL (MyAPI)"' (99874f2b)
+2021-08-25T11:37:47.5437228+07:00 0HMB7FKLLU883:0000000B [INF] Request finished in 199.7008ms 200 text/plain; charset=utf-8 (791a596a)
+2021-08-25T11:37:48.4392388+07:00 0HMB7FKLLU883:0000000C [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/Halcon/DL/Classify?pathImg=/opt/halcon/examples/images/color/citrus_fruits_01.png   (ca22a1cb)
+2021-08-25T11:37:48.4399581+07:00 0HMB7FKLLU883:0000000C [INF] Executing endpoint '"MyAPI.Controllers.HalconController.RunDL (MyAPI)"' (500cc934)
+2021-08-25T11:37:48.4407404+07:00 0HMB7FKLLU883:0000000C [INF] Route matched with "{action = \"RunDL\", controller = \"Halcon\"}". Executing controller action with signature "System.String RunDL(System.String[])" on controller "MyAPI.Controllers.HalconController" ("MyAPI"). (122b2fdf)
+2021-08-25T11:37:48.6306537+07:00 0HMB7FKLLU883:0000000C [INF] Executing ObjectResult, writing value of type '"System.String"'. (8a1b66c8)
+2021-08-25T11:37:48.6332008+07:00 0HMB7FKLLU883:0000000C [INF] Executed action "MyAPI.Controllers.HalconController.RunDL (MyAPI)" in 192.3309ms (afa2e885)
+2021-08-25T11:37:48.6339877+07:00 0HMB7FKLLU883:0000000C [INF] Executed endpoint '"MyAPI.Controllers.HalconController.RunDL (MyAPI)"' (99874f2b)
+2021-08-25T11:37:48.6350562+07:00 0HMB7FKLLU883:0000000C [INF] Request finished in 195.9684ms 200 text/plain; charset=utf-8 (791a596a)
+2021-08-25T11:37:49.3464066+07:00 0HMB7FKLLU883:0000000D [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/Halcon/DL/Classify?pathImg=/opt/halcon/examples/images/color/citrus_fruits_01.png   (ca22a1cb)
+2021-08-25T11:37:49.3470269+07:00 0HMB7FKLLU883:0000000D [INF] Executing endpoint '"MyAPI.Controllers.HalconController.RunDL (MyAPI)"' (500cc934)
+2021-08-25T11:37:49.3479360+07:00 0HMB7FKLLU883:0000000D [INF] Route matched with "{action = \"RunDL\", controller = \"Halcon\"}". Executing controller action with signature "System.String RunDL(System.String[])" on controller "MyAPI.Controllers.HalconController" ("MyAPI"). (122b2fdf)
+2021-08-25T11:37:49.5270155+07:00 0HMB7FKLLU883:0000000D [INF] Executing ObjectResult, writing value of type '"System.String"'. (8a1b66c8)
+2021-08-25T11:37:49.5274577+07:00 0HMB7FKLLU883:0000000D [INF] Executed action "MyAPI.Controllers.HalconController.RunDL (MyAPI)" in 179.3641ms (afa2e885)
+2021-08-25T11:37:49.5275345+07:00 0HMB7FKLLU883:0000000D [INF] Executed endpoint '"MyAPI.Controllers.HalconController.RunDL (MyAPI)"' (99874f2b)
+2021-08-25T11:37:49.5278260+07:00 0HMB7FKLLU883:0000000D [INF] Request finished in 181.4606ms 200 text/plain; charset=utf-8 (791a596a)
+2021-08-25T11:37:50.3544081+07:00 0HMB7FKLLU883:0000000E [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/Halcon/DL/Classify?pathImg=/opt/halcon/examples/images/color/citrus_fruits_01.png   (ca22a1cb)
+2021-08-25T11:37:50.3550364+07:00 0HMB7FKLLU883:0000000E [INF] Executing endpoint '"MyAPI.Controllers.HalconController.RunDL (MyAPI)"' (500cc934)
+2021-08-25T11:37:50.3557954+07:00 0HMB7FKLLU883:0000000E [INF] Route matched with "{action = \"RunDL\", controller = \"Halcon\"}". Executing controller action with signature "System.String RunDL(System.String[])" on controller "MyAPI.Controllers.HalconController" ("MyAPI"). (122b2fdf)
+2021-08-25T11:37:50.5224907+07:00 0HMB7FKLLU883:0000000E [INF] Executing ObjectResult, writing value of type '"System.String"'. (8a1b66c8)
+2021-08-25T11:37:50.5228551+07:00 0HMB7FKLLU883:0000000E [INF] Executed action "MyAPI.Controllers.HalconController.RunDL (MyAPI)" in 166.9196ms (afa2e885)
+2021-08-25T11:37:50.5230610+07:00 0HMB7FKLLU883:0000000E [INF] Executed endpoint '"MyAPI.Controllers.HalconController.RunDL (MyAPI)"' (99874f2b)
+2021-08-25T11:37:50.5234251+07:00 0HMB7FKLLU883:0000000E [INF] Request finished in 169.2232ms 200 text/plain; charset=utf-8 (791a596a)

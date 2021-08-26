@@ -10,7 +10,7 @@ using MyAPI.Models;
 
 namespace MyAPI.Controllers
 {
-    [EnableCors("AllowAll")]
+  
     [Route("api/[controller]")]
     [ApiController]
     public class ProductController : ControllerBase

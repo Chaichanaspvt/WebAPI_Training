@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hdevelop file_version="1.2" halcon_version="21.05.0.0">
+<procedure name="Load_Model">
+<interface>
+<ic>
+<par name="PathModel" base_type="ctrl" dimension="0"/>
+<par name="Type" base_type="ctrl" dimension="0"/>
+</ic>
+<oc>
+<par name="DLModelHandle" base_type="ctrl" dimension="0"/>
+<par name="DLPreprocessParam" base_type="ctrl" dimension="0"/>
+</oc>
+</interface>
+<body>
+<l>read_dl_model (PathModel, DLModelHandle)</l>
+<l>set_dl_model_param (DLModelHandle, 'runtime',Type)</l>
+<l>create_dl_preprocess_param_from_model (DLModelHandle, 'none', 'full_domain', [], [], [], DLPreprocessParam)</l>
+<l>return ()</l>
+</body>
+<docu id="Load_Model">
+<parameters>
+<parameter id="DLModelHandle"/>
+<parameter id="DLPreprocessParam"/>
+<parameter id="PathModel"/>
+<parameter id="Type"/>
+</parameters>
+</docu>
+</procedure>
+</hdevelop>

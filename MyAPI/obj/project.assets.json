@@ -497,6 +497,15 @@
           }
         }
       },
+      "MVTec.HalconDotNet/21050.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/MVTec.HalconDotNet.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/MVTec.HalconDotNet.dll": {}
+        }
+      },
       "Newtonsoft.Json/10.0.1": {
         "type": "package",
         "dependencies": {
@@ -2497,6 +2506,20 @@
         "runtimes/win/lib/netcoreapp3.0/Microsoft.Win32.SystemEvents.xml",
         "useSharedDesignerContext.txt",
         "version.txt"
+      ]
+    },
+    "MVTec.HalconDotNet/21050.0.0": {
+      "sha512": "gV513gg7htzpy4C5Ju/QOHLWknNdDWx/8oN0z69MVQDe3GSBAEUg6mMmyYoHZ+24VdXxK+JHEXQKhSgOngt1KA==",
+      "type": "package",
+      "path": "mvtec.halcondotnet/21050.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "EULA.txt",
+        "lib/netstandard2.0/MVTec.HalconDotNet.dll",
+        "lib/netstandard2.0/MVTec.HalconDotNet.xml",
+        "mvtec.halcondotnet.21050.0.0.nupkg.sha512",
+        "mvtec.halcondotnet.nuspec"
       ]
     },
     "Newtonsoft.Json/10.0.1": {
@@ -6267,39 +6290,31 @@
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
+      "MVTec.HalconDotNet >= 21050.0.0",
       "Microsoft.AspNetCore.Cors >= 2.2.0",
       "Microsoft.EntityFrameworkCore.SqlServer >= 5.0.9",
       "Serilog.Extensions.Logging.File >= 2.0.0"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\chaichana\\.nuget\\packages\\": {},
-    "C:\\Microsoft\\Xamarin\\NuGet\\": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "/home/sp/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "H:\\Training\\WebAPI_Training\\MyAPI\\MyAPI.csproj",
+      "projectUniqueName": "/home/sp/WebApiHalcon/WebAPI_Training/MyAPI/MyAPI.csproj",
       "projectName": "MyAPI",
-      "projectPath": "H:\\Training\\WebAPI_Training\\MyAPI\\MyAPI.csproj",
-      "packagesPath": "C:\\Users\\chaichana\\.nuget\\packages\\",
-      "outputPath": "H:\\Training\\WebAPI_Training\\MyAPI\\obj\\",
+      "projectPath": "/home/sp/WebApiHalcon/WebAPI_Training/MyAPI/MyAPI.csproj",
+      "packagesPath": "/home/sp/.nuget/packages/",
+      "outputPath": "/home/sp/WebApiHalcon/WebAPI_Training/MyAPI/obj/",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Microsoft\\Xamarin\\NuGet\\",
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-      ],
       "configFilePaths": [
-        "C:\\Users\\chaichana\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        "/home/sp/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp3.1"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -6318,6 +6333,10 @@
       "netcoreapp3.1": {
         "targetAlias": "netcoreapp3.1",
         "dependencies": {
+          "MVTec.HalconDotNet": {
+            "target": "Package",
+            "version": "[21050.0.0, )"
+          },
           "Microsoft.AspNetCore.Cors": {
             "target": "Package",
             "version": "[2.2.0, )"
@@ -6343,7 +6362,7 @@
         "warn": true,
         "downloadDependencies": [
           {
-            "name": "Microsoft.NETCore.App.Host.win-x64",
+            "name": "Microsoft.NETCore.App.Host.linux-x64",
             "version": "[3.1.17, 3.1.17]"
           }
         ],
@@ -6355,7 +6374,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.302\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/5.0.302/RuntimeIdentifierGraph.json"
       }
     }
   }
